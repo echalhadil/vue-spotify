@@ -1,26 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="h-screen overflow-hidden bg-gray-900">
+    <main class="flex">
+      <Sidebar />
+      <router-view v-slot="{ Component }">
+        <transition
+          mode="out-in"
+          duration="200"
+          enter-class="opacity-0  translate-y-8 "
+          leave-to-class=" opacity-0 translate-y-8 "
+          enter-active-class="transition-all  ease-in-out "
+          leave-active-class="transition-all   ease-in-out  "
+        >
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    </main>
+    <Player />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Sidebar from "./components/Sidebar";
+import Player from "./components/Player";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Sidebar,
+    Player,
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
