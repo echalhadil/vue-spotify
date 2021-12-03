@@ -41,7 +41,7 @@
       </div>
 
       <div
-        class=" overflow-y-auto scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-black max-h-48 text-gray-400"
+        class="overflow-y-auto scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-black max-h-48 text-gray-400"
       >
         <div
           v-for="(playlist, index) in playlists"
@@ -64,6 +64,7 @@ import {
   PlusIcon,
 } from "@heroicons/vue/outline";
 import CustomRouterLink from "./CustomRouterLink";
+import { mapState } from "vuex";
 
 export default {
   name: "Sidebar",
@@ -75,10 +76,8 @@ export default {
     PlusIcon,
     CustomRouterLink,
   },
-  data() {
-    return {
-      playlists:this.$store.getters.getPlaylists,
-    };
+  computed: {
+    ...mapState(["playlists"]),
   },
 };
 </script>

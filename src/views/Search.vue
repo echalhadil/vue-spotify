@@ -30,15 +30,11 @@
 <script>
 import Genre from "../components/Genre";
 import FavoriteGenre from "../components/FavoriteGenre";
-
+import {mapState} from 'vuex'
 export default {
   name: "Search",
   components: { Genre, FavoriteGenre },
-  data() {
-    return {
-      genres: this.$store.getters.getGenres,
-    };
-  },
+ 
   methods: {
     getImageLink() {
       let randomInt = 0;
@@ -47,6 +43,11 @@ export default {
       } while (randomInt < 300);
       return "https://picsum.photos/" + randomInt;
     },
+  },
+  computed: {
+    ...mapState([
+      'genres'
+    ])
   },
 };
 </script>
