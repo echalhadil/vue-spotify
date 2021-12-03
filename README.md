@@ -1,24 +1,8 @@
-# vue-spotify1
 
-## Project setup
-```
-npm install
-```
+## Search PAGE
+<p align="center"><a target="_blank">
+<iframe src="https://assets.pinterest.com/ext/embed.html?id=488499890841266297"  width="80%" frameborder="0" scrolling="no" ></iframe>
+</a></p>
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## HOME PAGE
+<p align="center"><a target="_blank"><iframe src="https://assets.pinterest.com/ext/embed.html?id=488499890841266297"  width="80%" frameborder="0" scrolling="no" ></iframe></a></p>
